@@ -1,0 +1,22 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+const int Max = 71;
+char Temp[Max];
+char Line[Max];
+
+int main()
+{
+	FILE * F = fopen("Source.txt","r");
+	while (true)
+	{
+		fgets(Temp, 70, F);
+		if (feof(F)) break;
+		if (Temp[0] = '\n') continue;
+		memcpy(Line, Temp, sizeof(Line));
+		printf("%s",Line);
+	}
+	_getch();
+}
